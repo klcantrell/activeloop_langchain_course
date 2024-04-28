@@ -8,6 +8,8 @@ langchain-google-community==1.0.2
 huggingface-hub==0.22.2
 openai==1.23.2
 tiktoken==0.6.0
+transformers==4.40.1
+pypdf==4.2.0
 deeplake==3.9.1
 google-api-python-client==2.127.0
 python-dotenv==1.0.1

@@ -14,7 +14,12 @@ from intro_llm import (
     # few_shot,
     # question_answering_prompts,
     # summarization,
-    translation,
+    # translation,
+    # intro_to_tokens,
+    # prompt_chain,
+    # summarization_chain,
+    # question_answer_chain,
+    conversation,
 )
 
 load_dotenv()
@@ -32,4 +37,9 @@ load_dotenv()
 # few_shot.run()
 # question_answering_prompts.run()
 # summarization.run()
-translation.run()
+# translation.run()
+# intro_to_tokens.run()
+# prompt_chain.run()
+# summarization_chain.run()
+# question_answer_chain.run()
+conversation.run()
