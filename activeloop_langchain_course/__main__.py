@@ -9,18 +9,20 @@ from dotenv import load_dotenv
 #     websearch_summary_tools,
 # )
 
-from intro_llm import (
-    # track_token_usage,
-    # few_shot,
-    # question_answering_prompts,
-    # summarization,
-    # translation,
-    # intro_to_tokens,
-    # prompt_chain,
-    # summarization_chain,
-    # question_answer_chain,
-    conversation,
-)
+# from intro_llm import (
+# track_token_usage,
+# few_shot,
+# question_answering_prompts,
+# summarization,
+# translation,
+# intro_to_tokens,
+# prompt_chain,
+# summarization_chain,
+# question_answer_chain,
+# conversation,
+# )
+
+import newspaper_summarizier
 
 load_dotenv()
 
@@ -42,4 +44,6 @@ load_dotenv()
 # prompt_chain.run()
 # summarization_chain.run()
 # question_answer_chain.run()
-conversation.run()
+# conversation.run()
+
+newspaper_summarizier.run()

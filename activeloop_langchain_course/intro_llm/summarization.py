@@ -4,7 +4,7 @@ from langchain_core.prompts import PromptTemplate
 
 
 def run():
-    llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
+    llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
 
     summarization_template = "Summarize the following text to one sentence: {text}"
     summarization_prompt = PromptTemplate(

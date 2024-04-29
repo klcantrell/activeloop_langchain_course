@@ -3,7 +3,7 @@ from langchain.schema import SystemMessage, HumanMessage, AIMessage
 
 
 def run():
-    llm = ChatOpenAI(model_name="gpt-4")
+    llm = ChatOpenAI(model="gpt-4")
 
     messages = [
         SystemMessage(content="You are a helpful assistant."),

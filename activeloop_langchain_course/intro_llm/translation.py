@@ -4,7 +4,7 @@ from langchain_core.prompts import PromptTemplate
 
 
 def run():
-    llm = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
+    llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
 
     translation_template = "Translate the following text from {source_language} to {target_language}: {text}"
     translation_prompt = PromptTemplate(

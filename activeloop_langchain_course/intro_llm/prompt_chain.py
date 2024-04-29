@@ -7,7 +7,7 @@ from langchain_core.prompts.chat import (
 
 
 def run():
-    chat = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0)
+    chat = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
 
     template = "You are an assistant that helps users find information about movies."
     system_message_prompt = SystemMessagePromptTemplate.from_template(template)

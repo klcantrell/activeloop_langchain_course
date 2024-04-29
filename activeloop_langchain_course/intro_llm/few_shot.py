@@ -51,7 +51,7 @@ def run():
     )
 
     # load the model
-    chat = ChatOpenAI(model_name="gpt-4", temperature=0.0)
+    chat = ChatOpenAI(model="gpt-4", temperature=0.0)
 
     chain = LLMChain(llm=chat, prompt=few_shot_prompt_template)
     print(chain.invoke("What's the meaning of life?"))
