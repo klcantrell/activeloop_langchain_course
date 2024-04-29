@@ -1,4 +1,5 @@
 from langchain_openai import ChatOpenAI
+from langchain_community.llms import Ollama
 from langchain.schema import HumanMessage
 from newspaper import Article
 
@@ -10,7 +11,34 @@ def run():
     article.parse()
 
     # _basic_summary(article)
-    _bulleted_list(article)
+    # _bulleted_list(article)
+    _bulleted_list_ollama(article)
+
+
+def _bulleted_list_ollama(article: Article):
+    # prepare template for prompt
+    template = """You are an advanced AI assistant that summarizes online articles into bulleted lists.
+
+    Here's the article you need to summarize.
+
+    ==================
+    Title: {article_title}
+
+    {article_text}
+    ==================
+
+    Now, provide a summarized version of the article in a bulleted list format.
+    """
+
+    # format prompt
+    prompt = template.format(article_title=article.title, article_text=article.text)
+
+    # load the model
+    chat = Ollama(model="llama3:8b", temperature=0)
+
+    # generate summary
+    summary = chat.invoke([HumanMessage(content=prompt)])
+    print(summary)
 
 
 def _bulleted_list(article: Article):
@@ -35,7 +63,7 @@ def _bulleted_list(article: Article):
     chat = ChatOpenAI(model="gpt-4", temperature=0)
 
     # generate summary
-    summary = chat([HumanMessage(content=prompt)])
+    summary = chat.invoke([HumanMessage(content=prompt)])
     print(summary.content)
 
 
