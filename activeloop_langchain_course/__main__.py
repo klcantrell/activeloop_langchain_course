@@ -29,7 +29,8 @@ from dotenv import load_dotenv
 from prompting import (
     # intro as prompting_intro,
     # few_shot as prompting_few_shot,
-    chaining_prompts,
+    # chaining_prompts,
+    using_selectors as prompting_using_selectors,
 )
 
 
@@ -60,4 +61,5 @@ load_dotenv()
 
 # prompting
 # prompting_intro.run()
-chaining_prompts.run()
+# chaining_prompts.run()
+prompting_using_selectors.run()
