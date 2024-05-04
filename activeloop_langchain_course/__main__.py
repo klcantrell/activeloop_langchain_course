@@ -22,22 +22,23 @@ from dotenv import load_dotenv
 #     conversation,
 # )
 
-# from prompting import (
-#     intro as prompting_intro,
-#     few_shot as prompting_few_shot,
-#     chaining_prompts,
-#     using_selectors as prompting_using_selectors,
-#     pydantic_output_parser as prompting_pydantic_output_parser,
-#     comma_separated_output_parser as prompting_comma_separated_output_parser,
-#     output_fixing_parser as prompting_output_fixing_parser,
-#     retry_output_parser as prompting_retry_output_parser,
-# )
-
-from newspaper_summarizier import (
-    # basic as newspaper_summarizer_basic,
-    # with_fewshot as newspaper_summarizier_with_fewshot,
-    with_parsing as newspaper_summarizer_with_parsing,
+from prompting import (
+    # intro as prompting_intro,
+    # few_shot as prompting_few_shot,
+    # chaining_prompts,
+    # using_selectors as prompting_using_selectors,
+    # pydantic_output_parser as prompting_pydantic_output_parser,
+    # comma_separated_output_parser as prompting_comma_separated_output_parser,
+    # output_fixing_parser as prompting_output_fixing_parser,
+    # retry_output_parser as prompting_retry_output_parser,
+    basic_knowledge_graphs as prompting_basic_knowledge_graphs,
 )
+
+# from newspaper_summarizier import (
+#     basic as newspaper_summarizer_basic,
+#     with_fewshot as newspaper_summarizier_with_fewshot,
+#     with_parsing as newspaper_summarizer_with_parsing,
+# )
 
 load_dotenv()
 
@@ -73,4 +74,5 @@ load_dotenv()
 # newspaper summarizier projects
 # newspaper_summarizer_basic.run()
 # newspaper_summarizier_with_fewshot.run()
-newspaper_summarizer_with_parsing.run()
+# newspaper_summarizer_with_parsing.run()
+prompting_basic_knowledge_graphs.run()
