@@ -8,6 +8,9 @@ from langchain.prompts import PromptTemplate
 # Define your desired data structure.
 class Suggestions(BaseModel):
     words: List[str] = Field(description="list of substitue words based on context")
+    reasons: List[str] = Field(
+        description="the reasoning of why this word fits the context"
+    )
 
     # Throw error in case of receiving a numbered-list from API
     @field_validator("words")
@@ -17,11 +20,19 @@ class Suggestions(BaseModel):
                 raise ValueError("The word can not start with numbers!")
         return field
 
+    @field_validator("reasons")
+    def end_with_dot(cls, field):
+        for idx, item in enumerate(field):
+            if item[-1] != ".":
+                field[idx] += "."
+        return field
+
 
 def run():
     parser = PydanticOutputParser(pydantic_object=Suggestions)
+
     template = """
-    Offer a list of suggestions to substitue the specified target_word based the presented context.
+    Offer a list of suggestions to substitute the specified target_word based on the presented context and the reason each word was selected. Each word should get its own reason. For example, if "mighty" is selected as a word, then the reason should begin with "mighty was chosen because...".
     {format_instructions}
     target_word={target_word}
     context={context}
