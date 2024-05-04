@@ -9,10 +9,6 @@ def run():
     article.download()
     article.parse()
 
-    _basic_summary(article)
-
-
-def _basic_summary(article: Article):
     # prepare template for prompt
     template = """
     As an advanced AI, you've been tasked to summarize online articles into bulleted points. Here are a few examples of how you've done this in the past:

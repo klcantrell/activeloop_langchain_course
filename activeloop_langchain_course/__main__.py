@@ -35,7 +35,8 @@ from dotenv import load_dotenv
 
 from newspaper_summarizier import (
     # basic as newspaper_summarizer_basic,
-    with_fewshot_and_parsing as newspaper_summarizer_with_fewshot_and_parsing,
+    # with_fewshot as newspaper_summarizier_with_fewshot,
+    with_parsing as newspaper_summarizer_with_parsing,
 )
 
 load_dotenv()
@@ -71,4 +72,5 @@ load_dotenv()
 
 # newspaper summarizier projects
 # newspaper_summarizer_basic.run()
-newspaper_summarizer_with_fewshot_and_parsing.run()
+# newspaper_summarizier_with_fewshot.run()
+newspaper_summarizer_with_parsing.run()
