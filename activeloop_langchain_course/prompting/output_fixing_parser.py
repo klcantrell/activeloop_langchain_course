@@ -31,7 +31,7 @@ def run():
     llm = OpenAI(model="gpt-3.5-turbo-instruct", temperature=0.0)
     parser = PydanticOutputParser(pydantic_object=Suggestions)
 
-    missformatted_output = '{"words": ["conduct", "manner"], "reasoning": ["refers to the way someone acts in a particular situation.", "refers to the way someone behaves in a particular situation."]}'
+    misformatted_output = '{"words": ["conduct", "manner"], "reasoning": ["refers to the way someone acts in a particular situation.", "refers to the way someone behaves in a particular situation."]}'
 
     outputfixing_parser = OutputFixingParser.from_llm(parser=parser, llm=llm)
-    print(outputfixing_parser.parse(missformatted_output))
+    print(outputfixing_parser.parse(misformatted_output))
