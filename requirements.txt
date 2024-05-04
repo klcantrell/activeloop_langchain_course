@@ -11,6 +11,7 @@ openai==1.23.2
 requests==2.31.0
 tiktoken==0.6.0
 transformers==4.40.1
+pydantic==2.7.1
 pypdf==4.2.0
 newspaper3k==0.2.8
 lxml_html_clean==0.1.1
