@@ -22,21 +22,21 @@ from dotenv import load_dotenv
 #     conversation,
 # )
 
-# from newspaper_summarizier import (
-#     basic as newspaper_summarizer_basic,
+# from prompting import (
+#     intro as prompting_intro,
+#     few_shot as prompting_few_shot,
+#     chaining_prompts,
+#     using_selectors as prompting_using_selectors,
+#     pydantic_output_parser as prompting_pydantic_output_parser,
+#     comma_separated_output_parser as prompting_comma_separated_output_parser,
+#     output_fixing_parser as prompting_output_fixing_parser,
+#     retry_output_parser as prompting_retry_output_parser,
 # )
 
-from prompting import (
-    # intro as prompting_intro,
-    # few_shot as prompting_few_shot,
-    # chaining_prompts,
-    # using_selectors as prompting_using_selectors,
-    # pydantic_output_parser as prompting_pydantic_output_parser,
-    # comma_separated_output_parser as prompting_comma_separated_output_parser,
-    # output_fixing_parser as prompting_output_fixing_parser,
-    retry_output_parser as prompting_retry_output_parser,
+from newspaper_summarizier import (
+    # basic as newspaper_summarizer_basic,
+    with_fewshot_and_parsing as newspaper_summarizer_with_fewshot_and_parsing,
 )
-
 
 load_dotenv()
 
@@ -60,9 +60,6 @@ load_dotenv()
 # question_answer_chain.run()
 # conversation.run()
 
-# newspaper summarizier projects
-# newspaper_summarizer_basic.run()
-
 # prompting
 # prompting_intro.run()
 # chaining_prompts.run()
@@ -70,4 +67,8 @@ load_dotenv()
 # prompting_pydantic_output_parser.run()
 # prompting_comma_separated_output_parser.run()
 # prompting_output_fixing_parser.run()
-prompting_retry_output_parser.run()
+# prompting_retry_output_parser.run()
+
+# newspaper summarizier projects
+# newspaper_summarizer_basic.run()
+newspaper_summarizer_with_fewshot_and_parsing.run()
