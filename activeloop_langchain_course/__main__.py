@@ -31,7 +31,8 @@ from prompting import (
     # few_shot as prompting_few_shot,
     # chaining_prompts,
     # using_selectors as prompting_using_selectors,
-    pydantic_output_parser as prompting_pydantic_output_parser,
+    # pydantic_output_parser as prompting_pydantic_output_parser,
+    comma_separated_output_parser as prompting_comma_separated_output_parser,
 )
 
 
@@ -64,4 +65,5 @@ load_dotenv()
 # prompting_intro.run()
 # chaining_prompts.run()
 # prompting_using_selectors.run()
-prompting_pydantic_output_parser.run()
+# prompting_pydantic_output_parser.run()
+prompting_comma_separated_output_parser.run()
