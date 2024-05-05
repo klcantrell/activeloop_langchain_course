@@ -13,6 +13,7 @@ tiktoken==0.6.0
 transformers==4.40.1
 pydantic==2.7.1
 pypdf==4.2.0
+pyvis==0.3.2
 newspaper3k==0.2.8
 lxml_html_clean==0.1.1
 google-api-python-client==2.127.0

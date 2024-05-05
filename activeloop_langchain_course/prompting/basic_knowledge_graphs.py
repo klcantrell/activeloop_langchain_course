@@ -1,7 +1,36 @@
+from typing import List
 from langchain.prompts import PromptTemplate
 from langchain_openai import OpenAI
 from langchain.chains import LLMChain
 from langchain.graphs.networkx_graph import KG_TRIPLE_DELIMITER
+from networkx import DiGraph
+from pyvis.network import Network
+import networkx as nx
+
+
+def parse_triples(response, delimiter=KG_TRIPLE_DELIMITER):
+    if not response:
+        return []
+    return response.split(delimiter)
+
+
+# Create a NetworkX graph from the extracted relation triplets
+def create_graph_from_triplets(triplets: List[str]):
+    G = nx.DiGraph()
+    for triplet in triplets:
+        subject, predicate, obj = triplet.strip().split(",")
+        G.add_edge(subject.strip(), obj.strip(), label=predicate.strip())
+    return G
+
+
+# Convert the NetworkX graph to a PyVis network
+def nx_to_pyvis(networkx_graph: DiGraph):
+    pyvis_graph = Network(notebook=True)
+    for node in networkx_graph.nodes():
+        pyvis_graph.add_node(node)
+    for edge in networkx_graph.edges(data=True):
+        pyvis_graph.add_edge(edge[0], edge[1], label=edge[2]["label"])
+    return pyvis_graph
 
 
 def run():
@@ -50,4 +79,18 @@ def run():
     chain_args = {"text": text}
     triples = chain.invoke(chain_args)
 
-    print(triples)
+    triples_list = parse_triples(
+        triples["text"]
+    )  # [' (Paris, is the capital of, France)', '(Paris, is the most populous city of, France)', '(Eiffel Tower, is a famous landmark in, Paris)']
+
+    triplets = [t.strip() for t in triples_list if t.strip()]
+    graph = create_graph_from_triplets(triplets)
+    pyvis_network = nx_to_pyvis(graph)
+
+    # Customize the appearance of the graph
+    pyvis_network.toggle_hide_edges_on_drag(True)
+    pyvis_network.toggle_physics(False)
+    pyvis_network.set_edge_smooth("discrete")
+
+    # Show the interactive knowledge graph visualization
+    pyvis_network.show("knowledge_graph.html")
