@@ -22,16 +22,20 @@ from dotenv import load_dotenv
 #     conversation,
 # )
 
-from prompting import (
-    # intro as prompting_intro,
-    # few_shot as prompting_few_shot,
-    # chaining_prompts,
-    # using_selectors as prompting_using_selectors,
-    # pydantic_output_parser as prompting_pydantic_output_parser,
-    # comma_separated_output_parser as prompting_comma_separated_output_parser,
-    # output_fixing_parser as prompting_output_fixing_parser,
-    # retry_output_parser as prompting_retry_output_parser,
-    basic_knowledge_graphs as prompting_basic_knowledge_graphs,
+# from prompting import (
+#     intro as prompting_intro,
+#     few_shot as prompting_few_shot,
+#     chaining_prompts,
+#     using_selectors as prompting_using_selectors,
+#     pydantic_output_parser as prompting_pydantic_output_parser,
+#     comma_separated_output_parser as prompting_comma_separated_output_parser,
+#     output_fixing_parser as prompting_output_fixing_parser,
+#     retry_output_parser as prompting_retry_output_parser,
+#     basic_knowledge_graphs as prompting_basic_knowledge_graphs,
+# )
+
+from indexes import (
+    intro as indexes_intro,
 )
 
 # from newspaper_summarizier import (
@@ -75,4 +79,8 @@ load_dotenv()
 # newspaper_summarizer_basic.run()
 # newspaper_summarizier_with_fewshot.run()
 # newspaper_summarizer_with_parsing.run()
-prompting_basic_knowledge_graphs.run()
+# prompting_basic_knowledge_graphs.run()
+
+
+# indexes
+indexes_intro.run()
