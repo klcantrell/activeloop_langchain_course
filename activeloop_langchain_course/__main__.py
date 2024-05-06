@@ -36,7 +36,8 @@ from dotenv import load_dotenv
 
 from indexes import (
     # intro as indexes_intro,
-    loaders as indexes_loaders,
+    # loaders as indexes_loaders,
+    text_splitters as indexes_text_splitters,
 )
 
 # from newspaper_summarizier import (
@@ -85,4 +86,5 @@ load_dotenv()
 
 # indexes
 # indexes_intro.run()
-indexes_loaders.run()
+# indexes_loaders.run()
+indexes_text_splitters.run()
