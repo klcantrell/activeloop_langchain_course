@@ -37,7 +37,10 @@ from dotenv import load_dotenv
 from indexes import (
     # intro as indexes_intro,
     # loaders as indexes_loaders,
-    text_splitters as indexes_text_splitters,
+    # text_splitters as indexes_text_splitters,
+    # basic_similarity_search as indexes_basic_similarity_search,
+    # hugging_face_embeddings as indexing_hugging_face_embeddings,
+    cohere_embeddings as indexing_cohere_embeddings,
 )
 
 # from newspaper_summarizier import (
@@ -87,4 +90,7 @@ load_dotenv()
 # indexes
 # indexes_intro.run()
 # indexes_loaders.run()
-indexes_text_splitters.run()
+# indexes_text_splitters.run()
+# indexes_basic_similarity_search.run()
+# indexing_hugging_face_embeddings.run()
+indexing_cohere_embeddings.run()
