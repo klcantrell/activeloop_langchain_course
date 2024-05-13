@@ -39,8 +39,9 @@ from indexes import (
     # loaders as indexes_loaders,
     # text_splitters as indexes_text_splitters,
     # basic_similarity_search as indexes_basic_similarity_search,
-    # hugging_face_embeddings as indexing_hugging_face_embeddings,
-    cohere_embeddings as indexing_cohere_embeddings,
+    # hugging_face_embeddings as indexes,
+    # cohere_embeddings as indexes,
+    qa_chatbot_selenium_loader as indexes_qa_chatbot_selenium_loader,
 )
 
 # from newspaper_summarizier import (
@@ -92,5 +93,6 @@ load_dotenv()
 # indexes_loaders.run()
 # indexes_text_splitters.run()
 # indexes_basic_similarity_search.run()
-# indexing_hugging_face_embeddings.run()
-indexing_cohere_embeddings.run()
+# indexes.run()
+# indexes_cohere_embeddings.run()
+indexes_qa_chatbot_selenium_loader.run()
