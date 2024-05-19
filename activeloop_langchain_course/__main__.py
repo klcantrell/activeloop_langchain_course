@@ -34,14 +34,19 @@ from dotenv import load_dotenv
 #     basic_knowledge_graphs as prompting_basic_knowledge_graphs,
 # )
 
-from indexes import (
-    # intro as indexes_intro,
-    # loaders as indexes_loaders,
-    # text_splitters as indexes_text_splitters,
-    # basic_similarity_search as indexes_basic_similarity_search,
-    # hugging_face_embeddings as indexes,
-    # cohere_embeddings as indexes,
-    qa_chatbot_selenium_loader as indexes_qa_chatbot_selenium_loader,
+# from indexes import (
+#     intro as indexes_intro,
+#     loaders as indexes_loaders,
+#     text_splitters as indexes_text_splitters,
+#     basic_similarity_search as indexes_basic_similarity_search,
+#     hugging_face_embeddings as indexes,
+#     cohere_embeddings as indexes,
+#     qa_chatbot_selenium_loader as indexes_qa_chatbot_selenium_loader,
+# )
+
+from chains import (
+    basic_llm_chain as chains_basic_llm_chain,
+    basic_parsers as chains_basic_parsers,
 )
 
 # from newspaper_summarizier import (
@@ -95,4 +100,8 @@ load_dotenv()
 # indexes_basic_similarity_search.run()
 # indexes.run()
 # indexes_cohere_embeddings.run()
-indexes_qa_chatbot_selenium_loader.run()
+# indexes_qa_chatbot_selenium_loader.run()
+
+# chains
+# chains_basic_llm_chain.run()
+chains_basic_parsers.run()
