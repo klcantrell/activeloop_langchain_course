@@ -48,7 +48,9 @@ from chains import (
     # basic_llm_chain as chains_basic_llm_chain,
     # basic_parsers as chains_basic_parsers,
     # basic_memory as chains_basic_memory,
-    basic_sequential_chain as chains_basic_sequential_chain,
+    # basic_sequential_chain as chains_basic_sequential_chain,
+    # debugging_chains as chains_debugging_chains,
+    custom_chains as chains_custom_chains,
 )
 
 # from newspaper_summarizier import (
@@ -108,4 +110,6 @@ load_dotenv()
 # chains_basic_llm_chain.run()
 # chains_basic_parsers.run()
 # chains_basic_memory.run()
-chains_basic_sequential_chain.run()
+# chains_basic_sequential_chain.run()
+# chains_debugging_chains.run()
+chains_custom_chains.run()
