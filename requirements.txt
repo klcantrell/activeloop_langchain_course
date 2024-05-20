@@ -9,10 +9,12 @@ langchain-text-splitters==0.0.1
 langchain-google-community==1.0.2
 huggingface-hub==0.22.2
 openai==1.23.2
-deeplake==3.9.3
+deeplake==3.9.7
 cohere==5.3.4
 tiktoken==0.6.0
+openai-whisper==20231117
 transformers==4.40.1
+yt-dlp==2024.4.9
 nltk==3.8.1
 newspaper3k==0.2.8
 numpy==1.26.4
