@@ -59,10 +59,12 @@ from dotenv import load_dotenv
 #     with_parsing as newspaper_summarizer_with_parsing,
 # )
 
-from youtube_summarizer import (
-    # without_vectordb as youtube_summarizer_without_vectordb,
-    with_vectordb as youtube_summarizer_with_vectordb,
-)
+# from youtube_summarizer import (
+#     without_vectordb as youtube_summarizer_without_vectordb,
+#     with_vectordb as youtube_summarizer_with_vectordb,
+# )
+
+import voice_assistant
 
 load_dotenv()
 
@@ -121,4 +123,7 @@ load_dotenv()
 
 # youtube summarizer
 # youtube_summarizer_without_vectordb.run()
-youtube_summarizer_with_vectordb.run()
+# youtube_summarizer_with_vectordb.run()
+
+# voice assistant
+voice_assistant.run() # with streamlit, command is streamlit run [path-to-file]
