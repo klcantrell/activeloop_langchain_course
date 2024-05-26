@@ -64,7 +64,10 @@ from dotenv import load_dotenv
 #     with_vectordb as youtube_summarizer_with_vectordb,
 # )
 
-import voice_assistant
+# import voice_assistant
+
+import codebase_assistant
+
 
 load_dotenv()
 
@@ -126,4 +129,7 @@ load_dotenv()
 # youtube_summarizer_with_vectordb.run()
 
 # voice assistant
-voice_assistant.run() # with streamlit, command is streamlit run [path-to-file]
+# voice_assistant.run() # with streamlit, command is streamlit run [path-to-file]
+
+# codebase_assist
+codebase_assistant.run()
