@@ -66,7 +66,11 @@ from dotenv import load_dotenv
 
 # import voice_assistant
 
-import codebase_assistant
+# import codebase_assistant
+
+from critique_chains import (
+    basic as critique_chains_basic,
+)
 
 
 load_dotenv()
@@ -132,4 +136,7 @@ load_dotenv()
 # voice_assistant.run() # with streamlit, command is streamlit run [path-to-file]
 
 # codebase_assist
-codebase_assistant.run()
+# codebase_assistant.run()
+
+# critique chains
+critique_chains_basic.run()
