@@ -70,6 +70,7 @@ from dotenv import load_dotenv
 
 from critique_chains import (
     basic as critique_chains_basic,
+    docs_helper_example as critique_chains_docs_helper_example,
 )
 
 
@@ -139,4 +140,5 @@ load_dotenv()
 # codebase_assistant.run()
 
 # critique chains
-critique_chains_basic.run()
+# critique_chains_basic.run()
+critique_chains_docs_helper_example.run()
