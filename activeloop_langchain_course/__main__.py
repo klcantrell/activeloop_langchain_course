@@ -68,10 +68,16 @@ from dotenv import load_dotenv
 
 # import codebase_assistant
 
-from critique_chains import (
-    basic as critique_chains_basic,
-    docs_helper_example as critique_chains_docs_helper_example,
-)
+# from critique_chains import (
+#     basic as critique_chains_basic,
+#     docs_helper_example as critique_chains_docs_helper_example,
+# )
+
+# from memory import (
+#     basic_memory as memory_basic,
+# )
+
+import codebase_assistant_ui
 
 
 load_dotenv()
@@ -141,4 +147,10 @@ load_dotenv()
 
 # critique chains
 # critique_chains_basic.run()
-critique_chains_docs_helper_example.run()
+# critique_chains_docs_helper_example.run()
+
+# memory
+# memory_basic.run()
+
+# codebase_assist_ui
+codebase_assistant_ui.run()
