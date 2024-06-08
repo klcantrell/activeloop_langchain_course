@@ -77,7 +77,15 @@ from dotenv import load_dotenv
 #     basic_memory as memory_basic,
 # )
 
-import codebase_assistant_ui
+from tools import (
+    # google_search as tools_google_search,
+    # requests as tools_requests,
+    # python_repl as tools_python_repl,
+    # wikipedia as tools_wikipedia,
+    multiple_tools as tools_multiple,
+)
+
+# import codebase_assistant_ui
 
 
 load_dotenv()
@@ -153,4 +161,11 @@ load_dotenv()
 # memory_basic.run()
 
 # codebase_assist_ui
-codebase_assistant_ui.run()
+# codebase_assistant_ui.run()
+
+# tools
+# tools_google_search.run()
+# tools_requests.run()
+# tools_python_repl.run()
+# tools_wikipedia.run()
+tools_multiple.run()
