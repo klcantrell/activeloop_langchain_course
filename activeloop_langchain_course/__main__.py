@@ -83,7 +83,8 @@ from tools import (
     # python_repl as tools_python_repl,
     # wikipedia as tools_wikipedia,
     # multiple_tools as tools_multiple,
-    writing_assistant as tools_writing_assistant,
+    # writing_assistant as tools_writing_assistant,
+    websearch_chatbot as tools_websearch_chatbot,
 )
 
 # import codebase_assistant_ui
@@ -170,4 +171,5 @@ load_dotenv()
 # tools_python_repl.run()
 # tools_wikipedia.run()
 # tools_multiple.run()
-tools_writing_assistant.run()
+# tools_writing_assistant.run()
+tools_websearch_chatbot.run()
