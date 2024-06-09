@@ -82,7 +82,8 @@ from tools import (
     # requests as tools_requests,
     # python_repl as tools_python_repl,
     # wikipedia as tools_wikipedia,
-    multiple_tools as tools_multiple,
+    # multiple_tools as tools_multiple,
+    writing_assistant as tools_writing_assistant,
 )
 
 # import codebase_assistant_ui
@@ -168,4 +169,5 @@ load_dotenv()
 # tools_requests.run()
 # tools_python_repl.run()
 # tools_wikipedia.run()
-tools_multiple.run()
+# tools_multiple.run()
+tools_writing_assistant.run()
