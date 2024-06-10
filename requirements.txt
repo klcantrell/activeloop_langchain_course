@@ -9,6 +9,7 @@ langchain-text-splitters==0.0.1
 langchain-google-community==1.0.2
 langchain-experimental==0.0.57
 huggingface-hub==0.22.2
+faiss-cpu==1.7.2
 openai==1.23.2
 deeplake==3.9.8
 cohere==5.3.4

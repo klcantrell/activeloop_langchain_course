@@ -88,7 +88,11 @@ from dotenv import load_dotenv
 #     custom_tool as tools_custom_tool,
 # )
 
-from agents import basic_question_answering as agents_basic_question_answering
+from agents import (
+    basic_question_answering as agents_basic_question_answering,
+    baby_agi as agent_baby_agi,
+)
+
 
 # import codebase_assistant_ui
 
@@ -179,4 +183,5 @@ load_dotenv()
 # tools_custom_tool.run()
 
 # agents
-agents_basic_question_answering.run()
+# agents_basic_question_answering.run()
+agent_baby_agi.run()
