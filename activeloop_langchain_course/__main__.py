@@ -77,16 +77,18 @@ from dotenv import load_dotenv
 #     basic_memory as memory_basic,
 # )
 
-from tools import (
-    # google_search as tools_google_search,
-    # requests as tools_requests,
-    # python_repl as tools_python_repl,
-    # wikipedia as tools_wikipedia,
-    # multiple_tools as tools_multiple,
-    # writing_assistant as tools_writing_assistant,
-    # websearch_chatbot as tools_websearch_chatbot,
-    custom_tool as tools_custom_tool,
-)
+# from tools import (
+#     google_search as tools_google_search,
+#     requests as tools_requests,
+#     python_repl as tools_python_repl,
+#     wikipedia as tools_wikipedia,
+#     multiple_tools as tools_multiple,
+#     writing_assistant as tools_writing_assistant,
+#     websearch_chatbot as tools_websearch_chatbot,
+#     custom_tool as tools_custom_tool,
+# )
+
+from agents import basic_question_answering as agents_basic_question_answering
 
 # import codebase_assistant_ui
 
@@ -174,4 +176,7 @@ load_dotenv()
 # tools_multiple.run()
 # tools_writing_assistant.run()
 # tools_websearch_chatbot.run()
-tools_custom_tool.run()
+# tools_custom_tool.run()
+
+# agents
+agents_basic_question_answering.run()
