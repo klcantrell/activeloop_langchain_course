@@ -89,8 +89,9 @@ from dotenv import load_dotenv
 # )
 
 from agents import (
-    basic_question_answering as agents_basic_question_answering,
-    baby_agi as agent_baby_agi,
+    # basic_question_answering as agents_basic_question_answering,
+    # baby_agi as agent_baby_agi,
+    autogpt as agent_autogpt,
 )
 
 
@@ -184,4 +185,5 @@ load_dotenv()
 
 # agents
 # agents_basic_question_answering.run()
-agent_baby_agi.run()
+# agent_baby_agi.run()
+agent_autogpt.run()

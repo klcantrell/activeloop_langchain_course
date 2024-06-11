@@ -1,7 +1,7 @@
 from langchain_openai import OpenAIEmbeddings, OpenAI
 import faiss
 from langchain_community.vectorstores import FAISS
-from langchain.docstore import InMemoryDocstore
+from langchain_community.docstore import InMemoryDocstore
 from langchain_experimental.autonomous_agents import BabyAGI
 
 
