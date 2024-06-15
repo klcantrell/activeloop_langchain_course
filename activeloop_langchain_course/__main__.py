@@ -88,15 +88,17 @@ from dotenv import load_dotenv
 # custom_tool as tools_custom_tool,
 # )
 
-from agents import (
-    # basic_question_answering as agents_basic_question_answering,
-    # baby_agi as agent_baby_agi,
-    # autogpt as agent_autogpt,
-    plan_and_execute as agents_plan_and_execute,
-)
+# from agents import (
+# basic_question_answering as agents_basic_question_answering,
+# baby_agi as agent_baby_agi,
+# autogpt as agent_autogpt,
+# plan_and_execute as agents_plan_and_execute,
+# )
 
 
 # import codebase_assistant_ui
+
+import supabase_test
 
 
 load_dotenv()
@@ -188,4 +190,7 @@ load_dotenv()
 # agents_basic_question_answering.run()
 # agent_baby_agi.run()
 # agent_autogpt.run()
-agents_plan_and_execute.run()
+# agents_plan_and_execute.run()
+
+
+supabase_test.run()
